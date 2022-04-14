@@ -1,0 +1,19 @@
+<h1 style=" list-style-type: none; text-transform:uppercase; font-family: montserrat;text-align: center; ">Hello User, these are your tasks for today :)!</h1>
+<% @tasks.each do |task| %>
+<ul style=" list-style-type: none; text-transform:uppercase; font-family: montserrat; margin-left: 30%; font-size: 30px;">
+  <li class="">
+  <% if task.completed%>
+    <i class="fas fa-check-square"></i>
+  <% else %>
+    <i class="fas fa-square"></i>
+  <% end %>
+  <%= link_to task.title, task_path(task.id) %> -   <%= link_to "Delete #{task.title}",
+            task_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+   </li>
+</ul>
+<% end %>
+
+<a href="/tasks/new" style="text-transform:uppercase; font-family: montserrat; margin-left: 30%;">Add a new Task!</a>

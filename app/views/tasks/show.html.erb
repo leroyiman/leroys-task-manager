@@ -1,0 +1,11 @@
+<h1 style="text-transform:uppercase; font-family: montserrat;text-align: center;"><%= @task.title %></h1>
+<p style="text-transform:uppercase; font-family: montserrat;text-align: center;"> <%= @task.details %> </p>
+<% if @task.completed%>
+   <p style="text-transform:uppercase; font-family: montserrat;text-align: center;"> <i class="fas fa-check-square"></i> This task is allready completed. Good Job! :)</p>
+  <% else %>
+    <p style="text-transform:uppercase; font-family: montserrat;text-align: center;"> <i class="fas fa-square"></i> This task is not done yet. Get your ass up! :( </p>
+  <% end %>
+
+ <p style="text-transform:uppercase; font-family: montserrat; margin-left: 30%;"><%= link_to "Edit this Post", edit_task_path() %> </p>
+ <%# <a href="/tasks/${@task}.id/edit" style="text-transform:uppercase; font-family: montserrat; margin-left: 30%;">Edit this Task!</a> %>
+<a href="/tasks" style="text-transform:uppercase; font-family: montserrat; margin-left: 30%;">Get back to all Tasks!</a>

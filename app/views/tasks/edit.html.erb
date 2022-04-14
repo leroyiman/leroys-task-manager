@@ -1,0 +1,9 @@
+<h1 style="text-transform:uppercase; font-family: montserrat;text-align: center;">Edit this Task</h1>
+<div class= >
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed, as: :boolean, checked_value: true, unchecked_value: false %>
+    <%= f.submit %>
+  <% end %>
+</div>
