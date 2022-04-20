@@ -7,7 +7,7 @@
   <% else %>
     <i class="fas fa-square"></i>
   <% end %>
-  <%= link_to task.title, task_path(task.id) %> -   <%= link_to "Delete #{task.title}",
+  <%= link_to task.title, task_path(task.id), class: 'custom' %> -   <%= link_to "Delete #{task.title}",
             task_path(task),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
